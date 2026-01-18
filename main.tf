@@ -31,3 +31,23 @@
 #         Project     = "ecs-test"
 #     }
 # }
+
+# main.tf for iam module
+# module "iam" {
+#     source = "./modules/iam"
+#     tags = {
+#         Environment = "dev"
+#         Project     = "ecs-test"
+#     }
+# }
+
+# main.tf for ecr module
+# module "ecr" {
+#     source = "./modules/ecr"
+#     repository_name = "ecs-test-repo"
+
+#     tags = {
+#         Environment = "dev"
+#         Project     = "ecs-test"
+#     }
+# }
