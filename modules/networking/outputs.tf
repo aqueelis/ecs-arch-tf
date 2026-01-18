@@ -11,5 +11,5 @@ output "private_subnet_ids" {
 }
 
 output "nat_gateway_ids" {
-  value = aws_nat_gateway.this[*].id
+  value = aws_nat_gateway.this.id
 }
