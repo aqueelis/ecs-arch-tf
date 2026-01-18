@@ -51,3 +51,14 @@
 #         Project     = "ecs-test"
 #     }
 # }
+
+# main.tf for ecs_cluster module
+module "ecs_cluster" {
+    source = "./modules/ecs_cluster"
+    cluster_name = "ecs-test-cluster"
+
+    tags = {
+        Environment = "dev"
+        Project     = "ecs-test"
+    }
+}
