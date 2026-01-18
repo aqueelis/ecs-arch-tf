@@ -17,3 +17,17 @@
 #     Project     = "ecs-test"
 #     }
 # }
+
+
+# main.tf for security group module
+# module "security" {
+#     source = "./modules/security"
+
+#     #vpc_id = module.networking.vpc_id
+#     vpc_id = ""  # hardicoded for testing purposes
+
+#     tags = {
+#         Environment = "dev"
+#         Project     = "ecs-test"
+#     }
+# }
