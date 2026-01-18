@@ -80,3 +80,31 @@
 #         Project     = "ecs-test"
 #     }
 # }
+
+# main.tf for ecs_service module
+# module "ecs_service" {
+#     source = "./modules/ecs-service"
+    # cluster_id              = module.ecs_cluster.cluster_id
+    # task_execution_role_arn = module.iam.ecs_task_execution_role
+    # task_role_arn           = module.iam.ecs_task_role
+
+    # container_name  = "app"
+    # container_image = module.ecr.repository_url
+    # container_port  = 80
+
+    # target_group_arn = module.alb.target_group_arn
+#     service_name = "ecs-test-service"
+#     cluster_id = "arn:aws:ecs:us-east-1:456956234448:cluster/DevCluster"  # hardcoded for testing purposes
+#     task_execution_role_arn = "arn:aws:iam::456956234448:role/ecsTaskExecutionRole"  # hardcoded for testing purposes
+#     task_role_arn = ""  # hardcoded for testing purposes
+#     container_name = "ndContainer"
+#     container_image = "456956234448.dkr.ecr.us-east-1.amazonaws.com/aqyrepo:ac283cc7dedc4babed74ab5b6db89589292dd4dc"  # hardcoded for testing purposes
+#     container_port = 5000
+    
+#     target_group_arn = "arn:aws:elasticloadbalancing:us-east-1:456956234448:targetgroup/na-TG/a5522c84baeeee2b"  # hardcoded for testing purposes
+
+#     tags = {
+#         Environment = "dev"
+#         Project     = "ecs-test"
+#     }
+# }
