@@ -51,3 +51,32 @@
 #         Project     = "ecs-test"
 #     }
 # }
+
+# main.tf for ecs_cluster module
+# module "ecs_cluster" {
+#     source = "./modules/ecs_cluster"
+#     cluster_name = "ecs-test-cluster"
+
+#     tags = {
+#         Environment = "dev"
+#         Project     = "ecs-test"
+#     }
+# }
+
+# main.tf for ecs_ec2_capacity module
+# module "ecs_ec2_capacity" {
+#     source = "./modules/ecs-ec2-capacity"
+#     # cluster_name = module.ecs_cluster.cluster_name
+#     # subnet_ids = module.networking.private_subnet_ids
+#     # security_group_ids = [module.security.ecs_instance_sg_id]
+#     # iam_instance_profile = module.iam.ecs_instance_profile_name
+#     cluster_name = "DevCluster"  # hardcoded for testing purposes
+#     subnet_ids = ["subnet-0145e99ad1a85115b"]  # hardcoded for testing purposes
+#     security_group_ids = ["sg-0fe57a474054c5fd2"]   # hardcoded for testing purposes
+#     iam_instance_profile = "ecsInstanceRole"  # hardcoded for testing purposes
+
+#     tags = {
+#         Environment = "dev"
+#         Project     = "ecs-test"
+#     }
+# }
