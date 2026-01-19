@@ -34,6 +34,11 @@ variable "iam_instance_profile" {
   type = string
 }
 
+variable "target_group_arns" {
+  type = list(string)
+  default = []
+}
+
 variable "tags" {
   type = map(string)
   default = {}

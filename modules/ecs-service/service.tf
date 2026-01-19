@@ -4,7 +4,7 @@ resource "aws_ecs_service" "this" {
   task_definition = aws_ecs_task_definition.this.arn
   desired_count = var.desired_count
   launch_type = "EC2"
-
+  health_check_grace_period_seconds = 120
   load_balancer {
     target_group_arn = var.target_group_arn
     container_name   = var.container_name

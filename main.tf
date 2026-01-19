@@ -69,7 +69,7 @@ module "ecs_ec2_capacity" {
     subnet_ids = module.networking.private_subnet_ids
     security_group_ids = [module.security.ecs_sg_id]
     iam_instance_profile = module.iam.ecs_instance_profile
-    
+    target_group_arns = [module.alb.target_group_arn]
     tags = {
         Environment = "dev"
         Project     = "ecs-test"
