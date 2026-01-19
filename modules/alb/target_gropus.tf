@@ -4,6 +4,7 @@ resource "aws_lb_target_group" "this" {
   protocol = "HTTP"
   vpc_id = var.vpc_id
   target_type = "instance"
+  deregistration_delay = 60
   
   health_check {
     path                = "/"
