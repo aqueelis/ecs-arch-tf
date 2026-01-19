@@ -100,7 +100,7 @@ module "ecs_service" {
     container_image = module.ecr.repository_url
 
     target_group_arn = module.alb.target_group_arn
-    service_name = "ecs-test-service"
+    service_name = "ecs-service-test"
     container_port = 5000
     desired_count = 2
     
