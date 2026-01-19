@@ -1,7 +1,7 @@
 resource "aws_ecs_task_definition" "this" {
   family = var.service_name
   requires_compatibilities = ["EC2"]
-  network_mode = "bridge"
+  network_mode = "default"
   cpu = var.cpu
   memory = var.memory
   execution_role_arn = var.task_execution_role_arn
