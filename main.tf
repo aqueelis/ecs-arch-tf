@@ -102,6 +102,7 @@ module "ecs_service" {
     target_group_arn = module.alb.target_group_arn
     service_name = "ecs-test-service"
     container_port = 5000
+    desired_count = 2
     
     
     tags = {
