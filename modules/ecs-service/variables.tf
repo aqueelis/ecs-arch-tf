@@ -22,7 +22,7 @@ variable "container_image" {
   type = string
 }
 
-variable "version" {
+variable "imageversion" {
   type = string
   default = "v1.0"
 }
