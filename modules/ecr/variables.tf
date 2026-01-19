@@ -4,7 +4,7 @@ variable "repository_name" {
 
 variable "image_tag_mutability" {
   type = string
-  default = "IMMUTABLE"
+  default = "MUTABLE"
 }
 
 variable "scan_on_push" {
