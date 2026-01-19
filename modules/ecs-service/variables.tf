@@ -22,10 +22,6 @@ variable "container_image" {
   type = string
 }
 
-variable "version" {
-  type = string
-  default = "v1.0"
-}
 
 variable "container_port" {
   type = number

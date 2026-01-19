@@ -98,7 +98,6 @@ module "ecs_service" {
 
     container_name  = "app"
     container_image = module.ecr.repository_url
-    version = "v2.0"
 
     target_group_arn = module.alb.target_group_arn
     service_name = "ecs-test-service"

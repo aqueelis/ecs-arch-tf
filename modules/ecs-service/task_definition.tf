@@ -10,7 +10,7 @@ resource "aws_ecs_task_definition" "this" {
   container_definitions = jsonencode([
     {
       name      = var.container_name
-      image     = "${var.container_image}:${var.version}"
+      image     = "${var.container_image}:$latest"
       cpu       = var.cpu
       memory    = var.memory
       essential = true
