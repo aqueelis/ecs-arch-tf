@@ -17,7 +17,7 @@ resource "aws_ecs_task_definition" "this" {
       portMappings = [
         {
           containerPort = var.container_port
-          hostPort      = 0 #allocate a random host port as we are using bridge mode
+          hostPort      = var.container_port 
           protocol      = "tcp"
         }
       ]
