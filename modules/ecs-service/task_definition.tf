@@ -1,5 +1,5 @@
 resource "aws_ecs_task_definition" "this" {
-  family = var.service_name + "-TD"
+  family = var.service_name
   requires_compatibilities = ["EC2"]
   network_mode = "bridge"
   cpu = var.cpu
