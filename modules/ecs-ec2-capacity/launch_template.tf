@@ -19,7 +19,7 @@ resource "aws_launch_template" "this" {
   network_interfaces {
     security_groups = var.security_group_ids
     subnet_id       = element(var.subnet_ids, 0)
-    associate_public_ip_address = true
+    associate_public_ip_address = false
   }
 
   user_data = base64encode(local.ecs_user_data)
