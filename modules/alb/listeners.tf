@@ -18,7 +18,7 @@ resource "aws_lb_listener" "https" {
   protocol = "HTTPS"
 
   ssl_policy = "ELBSecurityPolicy-2016-08"
-  certificate_arn = "arn:aws:acm:us-east-1:456956234448:certificate/9ace21a4-0aac-4acd-82f1-099d5cb7f150"
+  certificate_arn = "" #generate certificate and paste the ARN here
   default_action {
     type             = "forward"
     target_group_arn = aws_lb_target_group.this.arn
